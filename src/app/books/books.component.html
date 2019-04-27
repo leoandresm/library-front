@@ -1,5 +1,18 @@
-<ul>
-  <li *ngFor="let book of books">
-    {{ book.title }}
-  </li>
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Author</th>
+      <th scope="col">Read</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <th>{{ book.title }}</th>
+      <td>{{ book.genre }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.read }}</td>
+    </tr>
+  </tbody>
+</table>
