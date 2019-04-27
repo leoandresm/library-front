@@ -1,0 +1,20 @@
+<form (ngSubmit)="saveBook()">
+  <div class="form-group">
+    <label for="inputTitle">Title</label>
+    <input type="text" [(ngModel)]="book.title" name="title" class="form-control" id="inputTitle" placeholder="Title">
+ </div>
+  <div class="form-group">
+    <label for="inputGenre">Genre</label>
+    <input type="text" [(ngModel)]="book.genre" name="genre" class="form-control" id="inputGenre" placeholder="Genre">
+  </div>
+  <div class="form-group">
+    <label for="inputAuthor">Author</label>
+    <input type="text" [(ngModel)]="book.author" name="author" class="form-control" id="inputAuthor" placeholder="Author">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" [(ngModel)]="book.read" name="read" class="form-check-input" id="checkRead">
+    <label class="form-check-label" for="checkRead">Read</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-secondary" (click)="goBack()">Cancel</button>
+</form>
